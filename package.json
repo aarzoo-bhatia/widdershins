@@ -1,5 +1,5 @@
 {
-  "name": "widdershins",
+  "name": "openapi-to-nolink-markdown",
   "version": "3.0.6",
   "description": "OpenApi / Swagger / AsyncAPI / Semoasa definition to slate / shins compatible markdown",
   "main": "index.js",
@@ -7,14 +7,15 @@
     "widdershins": "./widdershins.js"
   },
   "directories": {
-    "doc": "docs"
+    "doc": "docs",
+    "test": "test"
   },
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mermade/widdershins.git"
+    "url": "git+https://github.com/aarzoo-bhatia/widdershins.git"
   },
   "keywords": [
     "swagger",
@@ -28,12 +29,9 @@
     "documentation",
     "semoasa"
   ],
-  "author": "Mike Ralphson",
+  "author": "Aarzoo Bhatia",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Mermade/widdershins/issues"
-  },
-  "homepage": "https://github.com/Mermade/widdershins#readme",
+  "homepage": "https://github.com/aarzoo-bhatia/widdershins#readme",
   "dependencies": {
     "dot": "^1.0.3",
     "jgexml": "latest",
