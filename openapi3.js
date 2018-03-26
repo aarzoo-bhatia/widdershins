@@ -321,15 +321,6 @@ function getResponses(data) {
         let entry = {};
         entry.status = r;
         entry.meaning = (r === 'default' ? data.translations.responseDefault : data.translations.responseUnknown);
-        var url = '';
-        for (var s in common.statusCodes) {
-            if (common.statusCodes[s].code === r) {
-                entry.meaning = common.statusCodes[s].phrase;
-                url = common.statusCodes[s].spec_href;
-                break;
-            }
-        }
-        if (url) entry.meaning = '[' + entry.meaning + '](' + url + ')';
         entry.description = (typeof response.description === 'string' ? response.description.trim() : undefined);
         entry.schema = response.content ? data.translations.schemaInline : data.translations.schemaNone;
         for (let ct in response.content) {
@@ -337,7 +328,7 @@ function getResponses(data) {
             if (contentType.schema) entry.type = contentType.schema.type;
             if (contentType.schema && contentType.schema["x-widdershins-oldRef"]) {
                 let schemaName = contentType.schema["x-widdershins-oldRef"].replace('#/components/schemas/','');
-                entry.schema = '['+schemaName+'](#schema'+schemaName.toLowerCase()+')';
+                entry.schema = schemaName;
                 entry.$ref = true;
             }
             else {
