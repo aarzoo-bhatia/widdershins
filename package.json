@@ -1,6 +1,6 @@
 {
   "name": "openapi-to-nolink-markdown",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "OpenApi / Swagger / AsyncAPI / Semoasa definition to slate / shins compatible markdown",
   "main": "index.js",
   "bin": {
