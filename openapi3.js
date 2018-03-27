@@ -33,8 +33,8 @@ function convertToToc(source,data) {
                 method.verb = m;
                 method.path = p;
                 method.pathParameters = source.paths[p].parameters;
-                var sMethodUniqueName = (method.operation.operationId ? method.operation.operationId : m + '_' + p).split('/').join('_');
-                sMethodUniqueName = sMethodUniqueName.split(' ').join('_'); // TODO {, } and : ?
+                var sMethodUniqueName = (method.operation.operationId ? method.operation.operationId : m + '_' + p).split('/').join('/');
+                sMethodUniqueName = sMethodUniqueName.split(' ').join(' '); // TODO {, } and : ?
                 if (data.options.tocSummary && method.operation.summary) {
                     sMethodUniqueName = method.operation.summary;
                 }
